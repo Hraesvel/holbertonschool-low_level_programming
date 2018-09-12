@@ -1,0 +1,16 @@
+6-size.c: In function ‘main’:
+6-size.c:4:3: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   printf("Size of a char: %d byte(s)\n", sizeof(char));
+   ^
+6-size.c:5:3: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   printf("Size of a int: %d byte(s)\n", sizeof(int));
+   ^
+6-size.c:6:3: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   printf("Size of a long int: %d byte(s)\n", sizeof(long int));
+   ^
+6-size.c:7:3: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   printf("Size of a long long: %d byte(s)\n", sizeof(long long));
+   ^
+6-size.c:8:3: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
+   printf("Size of a float: %d byte(s)\n", sizeof(float));
+   ^

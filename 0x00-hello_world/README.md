@@ -27,3 +27,7 @@ This is my first "C" code for this module. Using puts function to out put some t
 ### [5-printf.c](./5-printf.c)
 
 This time in "C" i ill use the `printf()` rather than `puts()` function to out put some text to the prompt
+
+### [6-size.c](./6-size.c)
+
+I have to this time make an executable with "C" that will print out the size of Var types pending targeted architecture.
