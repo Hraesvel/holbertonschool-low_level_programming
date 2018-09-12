@@ -16,5 +16,11 @@ For a second task we have to create a script that takes a Var--$CFILE="main.c"--
 
 For a third task we have to create a script that takes a Var--$CFILE="main.c"-- and compiles into a assembly code.
 
+### [3-name](./3-name)
+
+For a my forth task I need to compile a file and out put it as a different name than the default.
+
+
+
 
 
