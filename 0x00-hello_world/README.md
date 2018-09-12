@@ -22,6 +22,8 @@ For a my forth task I need to compile a file and out put it as a different name 
 
 ### [4-puts.c](./4-puts.c)
 
-This is my first "C" code for this module. Using puts fuction to out put some text to the prompt.
+This is my first "C" code for this module. Using puts function to out put some text to the prompt
 
+### [5-printf.c](./5-printf.c)
 
+This time in "C" i ill use the `printf()` rather than `puts()` function to out put some text to the prompt
