@@ -12,3 +12,9 @@ for our firs task we creating a shell script to use the gcc and only preprocess 
 
 For a second task we have to create a script that takes a Var--$CFILE="main.c"-- and compiles it to an object file.
 
+### [2-assembler](./2-assembler)
+
+For a third task we have to create a script that takes a Var--$CFILE="main.c"-- and compiles into a assembly code.
+
+
+
