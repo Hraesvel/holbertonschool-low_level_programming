@@ -99,9 +99,14 @@ $ ./6-print_numberz
 $ 
 ```
 
-### []()
+### [7-print_tebahpla.c](./7-print_tebahpla.c)
+This task I require to print the alphabet in reverse using only putchar.
 
--
+```
+$ ./7-print_tebahpla 
+zyxwvutsrqponmlkjihgfedcba
+$ 
+```
 
 ### []()
 
