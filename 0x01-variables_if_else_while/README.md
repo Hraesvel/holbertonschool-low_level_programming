@@ -50,7 +50,16 @@ $
 ```
 
 
-### []()
+### [4-print_alphabt.c](./4-print_alphabt.c)
+
+For this task I need to print a..z and new-line after plus exclude 'e' & 'q' from the list using only `putchar()`.
+
+```
+$ ./4-print_alphabt 
+abcdfghijklmnoprstuvwxyz
+$ 
+ 
+```
 
 -
 
