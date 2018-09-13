@@ -1,7 +1,7 @@
 	.file	"main.c"
 	.section	.rodata
 .LC0:
-	.string	"Hello World"
+	.string	"Hello Puts"
 	.text
 	.globl	main
 	.type	main, @function
@@ -13,10 +13,21 @@ main:
 	.cfi_offset 6, -16
 	movq	%rsp, %rbp
 	.cfi_def_cfa_register 6
+	subq	$16, %rsp
 	movl	$.LC0, %edi
 	call	puts
-	movl	$1, %eax
-	popq	%rbp
+	movl	$0, -4(%rbp)
+	jmp	.L2
+.L3:
+	movl	-4(%rbp), %eax
+	movl	%eax, %edi
+	call	puts
+	addl	$1, -4(%rbp)
+.L2:
+	cmpl	$4, -4(%rbp)
+	jle	.L3
+	movl	$0, %eax
+	leave
 	.cfi_def_cfa 7, 8
 	ret
 	.cfi_endproc

@@ -3,3 +3,9 @@
 ### [0x00-hello_world](./0x00-hello_world)
 
 This module is our my first real step into the C language.
+
+### [0x01-variables_if_else_while](./0x01-variables_if_else_while)
+
+Day two of C.
+This module we explore if , else and loops.
+
