@@ -39,9 +39,15 @@ $ ./1-last_digit.c
 $ Last digit of 809065140 is 0 and is 0
 ```
 
-### []()
+### [2-print_alphabet.c](./2-print_alphabet.c)
 
--
+For this task we need to to print a..z with a new-line after, using only `putchar()`
+
+```
+$ ./2-print_alphabet
+$ abcdefghijklmnopqrstuvwxyz
+$ 
+```
 
 
 ### []()
