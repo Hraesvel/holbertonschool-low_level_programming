@@ -108,27 +108,24 @@ zyxwvutsrqponmlkjihgfedcba
 $ 
 ```
 
-### []()
+### [8-print_base16.c](./8-print_base16.c)
+this task 
+
+
+### [9-print_comb.c](./9-print_comb.c)
 
 -
 
-### []()
+### [10-print_comb2.c](./10-print_comb2.c)
 
 -
 
-### []()
-
+### [100-print_comb3.c](./100-print_comb3.c)
+#### Advance 
 -
 
-### []()
-
--
-
-### []()
-
--
-
-### []()
+### [101-print_comb4.c](./101-print_comb4.c)
+#### Advance
 
 -
 
