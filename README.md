@@ -9,3 +9,7 @@ This module is our my first real step into the C language.
 Day two of C.
 This module we explore if , else and loops.
 
+### [0x02-functions_nested_loops](/0x02-functions_nested_loops)
+
+Day three of C
+This module we explore nested loops.
