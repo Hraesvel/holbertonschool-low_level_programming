@@ -11,4 +11,4 @@ _temp/
 _putchar.*
 
 #ignore for 0x02
-./0x02-functions_nested_loops/*-main.c
+0x02-functions_nested_loops/*-main.c
