@@ -14,6 +14,7 @@ void print_fib_x50(void)
 	f = 1;
 	l = 2;
 	target = 50;
+	printf("1, 2, ");
 	for (i = 0 ; i < target ; i++)
 	{
 		fib = f + l;
