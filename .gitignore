@@ -1,7 +1,14 @@
 # ignore emacs buffer files
 *~
-
+#*#
 #ignore a symlink to my scripts
 _sc
+#ignore temp dir and contents
+_temp/
+/temp/
 
-_temp
+#ignore the _putchar files.
+_putchar.*
+
+#ignore for 0x02
+./0x02-functions_nested_loops/*-main.c
