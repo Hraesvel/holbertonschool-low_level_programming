@@ -49,9 +49,51 @@ abcdefghijklmnopqrstuvwxyz
 $
 ```
 
+#### [3-islower.c](./3-islower.c)
+###### title: 0. _islower
+I have to write a function–`_islower`–that perform the same fuctions as one shipped with "C" `islower()`.
+* add to `holberton.h`
+
+```
+$ gcc _putchar.c 3-main.c 3-islower.c -o 3-islower
+$ ./3-islower
+011
+$
+```
+
+
+#### [4-isalpha.c](./4-isalpha.c)
+###### title: isalpha
+I need to recreate a function–`_isalpha()`–that perform that same job as shipped one `isalpha()`
+
+```
+$ hello world
+```
+
+
+#### [5-sign](./5-sign.c)
+###### title: 5-sign
+Have to create is function that prints the sign `+/-` of a given number or "Zero".
+* Prototype: int print_sign(int n);
+* Returns 1 and prints + if n is greater than zero
+* Returns 0 and prints 0 if n is zero
+* Returns -1 and prints - if n is less than zero
+
+```
+$ gcc _putchar.c 5-main.c 5-sign.c -o 5-sign
+$ ./5-sign
++, 1
+0, 0
++, 1
+-, /
+$ 
+```
+
+
 #### [0. _putchar](./0-holberton.c)
 ###### title: 0. _putchar
 ```
 $ hello world
 ```
+
 
