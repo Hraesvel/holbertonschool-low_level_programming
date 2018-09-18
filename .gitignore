@@ -1,6 +1,7 @@
 # ignore emacs buffer files
 *~
-#*#
+\#*\#
+
 #ignore a symlink to my scripts
 _sc
 #ignore temp dir and contents
