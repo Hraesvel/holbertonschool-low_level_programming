@@ -1,6 +1,6 @@
 # 0x02. C - Functions, nested loops
 
-<text placeholder>
+Test `*-main.c` file are locate in `main` directory.
 
 ### Tasks
 
