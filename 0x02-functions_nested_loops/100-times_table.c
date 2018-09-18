@@ -22,14 +22,14 @@ void print_times_table(int n)
 			int sum = v * h;
 
 			_putchar(',');
-                        if (sum / 1000 == 0)
-                        {
-                                _putchar(32);
-                        }
-                        else
-                        {
-                                _putchar('0' + (sum / 1000));
-                        }
+			if (sum / 1000 == 0)
+			{
+				_putchar(32);
+			}
+			else
+			{
+				_putchar('0' + (sum / 1000));
+			}
 			if (sum / 100 == 0)
 			{
 				_putchar(32);
