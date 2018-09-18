@@ -35,6 +35,6 @@ void print_fib_x50(void)
  */
 int main(void)
 {
-	print_fib();
+	print_fib_x50();
 	return (0);
 }
