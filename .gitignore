@@ -1,6 +1,7 @@
 # ignore emacs buffer files
 *~
 \#*\#
+*_bkp*
 
 #ignore a symlink to my scripts
 _sc
