@@ -17,6 +17,12 @@ void print_triangle(int size)
  */
 	int i, margin, dis, to_print;
 
+	if (size <= 0)
+	{
+		putchar('\n');
+		return;
+	}
+
 	dis = size - 1;
 	for (i = 0 ; i < size ; i++)
 	{
