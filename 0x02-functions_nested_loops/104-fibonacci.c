@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * print_fib - prints the first 50 Fibonacci numbers,
  * starting with 1 and 2, followed by a new line.
@@ -9,18 +8,20 @@
  */
 void print_fib(int len)
 {
-	unsigned int target;
-	unsigned long int f, l, i, fib;
+	unsigned int target, i;
+
+	unsigned int former_l, former_r,;
+	unsigned int latter_l, latter_r;
+	unsigned int fib_l, fib_r;
 
 	f = 1;
 	l = 2;
 	target = len - 2;
-	printf("1, 2, ");
 	for (i = 0 ; i < target ; i++)
 	{
 		fib = f + l;
-		printf("%lu : ", i + 4);
-		printf("%lu", fib);
+		printf("%d : ", i + 4);
+		printf("%.0Lf" , fib);
 		f = l;
 		l = fib;
 		if (i < target - 1)
