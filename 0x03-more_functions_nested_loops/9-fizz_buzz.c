@@ -16,20 +16,23 @@ int main(void)
 		num++;
 		if ((num % 3) != 0 && (num % 5) != 0)
 		{
-			printf("%d ", num);
+			printf("%d", num);
 		}
 		else if ((num % 3)  == 0 && (num % 5) != 0)
 		{
-			printf("Fizz ");
+			printf("Fizz");
 		}
 		else if ((num % 3) != 0 && (num % 5) == 0)
 		{
-			printf("Buzz ");
+			printf("Buzz");
 		}
 		else
 		{
-			printf("FizzBuzz ");
+			printf("FizzBuzz");
 		}
+		if (num < 100)
+			putchar(32);
 	}
+	putchar('\n');
 	return (0);
 }
