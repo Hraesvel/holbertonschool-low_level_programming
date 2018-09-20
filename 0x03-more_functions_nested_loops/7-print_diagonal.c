@@ -2,7 +2,7 @@
 
 /**
  * print_diagonal - print a diagonal line to a given lenth.
- * @a: length to print to.
+ * @n: length to print to.
  */
 void print_diagonal(int n)
 {
@@ -19,8 +19,8 @@ void print_diagonal(int n)
 		prior = i;
 		while (prior > 0)
 		{
-	       		_putchar(32);
-       			prior--;
+			_putchar(32);
+			prior--;
 		}
 		_putchar('\\');
 		_putchar('\n');
