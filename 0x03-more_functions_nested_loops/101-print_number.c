@@ -10,13 +10,18 @@ int _pow(int a, int b);
 void print_number(int n)
 {
 	int collection = n;
-	unsigned int new_num = n;
+	unsigned int new_num;
 	int count = 0;
 	int print = 0;
 
 	if (n < 0)
 	{
+		new_num = -n;
 		_putchar('-');
+	}
+	else
+	{
+		new_num = n;
 	}
 
 	while (collection != 0)
