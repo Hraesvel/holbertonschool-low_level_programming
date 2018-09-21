@@ -1,19 +1,12 @@
 #include "holberton.h"
 
-/**
- * _pow - power fuction
- * @a: value to use.
- * @b: growth count
- *
- * Return: value int.
- */
+
 int _pow(int a, int b);
 
 /**
  * print_number - print the given number.
  * @n: number to print.
  */
-
 void print_number(int n)
 {
 	int collection = n;
@@ -64,6 +57,13 @@ void print_number(int n)
 	} while (count > -1);
 }
 
+/**
+ * _pow - power fuction
+ * @a: value to use.
+ * @b: growth count
+ *
+ * Return: value int.
+ */
 int _pow(int a, int b)
 {
 	int i;
