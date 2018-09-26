@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * puts2 - every other char.
@@ -6,11 +7,12 @@
  */
 void puts2(char *str)
 {
-	while (*str != '\0')
+	int count = 0;
+
+	while (*(str + count) != '\0')
 	{
-		_putchar(*str);
-		str++;
-		str++;
+		_putchar(*(str + count));
+		count += 2;
 	}
 	_putchar('\n');
 }
