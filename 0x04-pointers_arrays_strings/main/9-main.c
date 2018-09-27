@@ -5,14 +5,14 @@
  * main - check the code for Holberton School students.
  *
  * Return: Always 0.
- */
+  */
 int main(void)
 {
-	int n;
+	char s1[98];
+	char *p;
 
-	n = 402;
-	printf("n=%d\n", n);
-	reset_to_98(&n);
-	printf("n=%d\n", n);
+	p = _strcpy(s1, "First, solve the problem. Then, write the code\n");
+	printf("%s", s1);
+	printf("%s", p);
 	return (0);
 }
