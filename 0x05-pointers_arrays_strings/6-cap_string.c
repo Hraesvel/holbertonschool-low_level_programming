@@ -14,7 +14,7 @@ int is_sep(char s)
 	int i = 0;
 
 	while (sep[i] != '\0')
-	{	
+	{
 		if (s == sep[i])
 			return (1);
 		i++;
