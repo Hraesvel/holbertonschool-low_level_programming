@@ -8,16 +8,11 @@
  */
 int main(void)
 {
-	char s[] = "Holberton School!\n";
+	char s[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\n";
 	char *p;
-	char a[]="";
-	char *t;
-	p = string_toupper(s);
+
+	p = leet(s);
 	printf("%s", p);
 	printf("%s", s);
-
-	t = string_toupper(a);
-	printf("%s", t);
-	printf("%s", a);
 	return (0);
 }
