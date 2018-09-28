@@ -1,19 +1,20 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
 * is_sep - check if a char is a seperator.
-* @s - the char to test.
+* @s: the char to test.
 *
 * Return: 1 if seperator is found else 0
 */
 int is_sep(char s)
 {
-	char sep[] = {'\t', '\n', ' ', ',', ';', '.',
-		      '!', '?', '\"', '(', ')', '{', '}'};
+	char sep[] = {'\t', '\n', ' ', ',', ';', '!',
+		      '.', '?', '\"', '(', ')', '{', '}'};
 	int i = 0;
 
 	while (sep[i] != '\0')
-	{
+	{	
 		if (s == sep[i])
 			return (1);
 		i++;
@@ -23,7 +24,7 @@ int is_sep(char s)
 
 /**
 * cap_string - This function capitalizes all words of a string.
-* @s - sring to be processed.
+* @s: sring to be processed.
 *
 * Return: pointer to the modified string.
 */
@@ -35,7 +36,7 @@ char *cap_string(char *s)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (sep == 1 && (s[i] > 'a' && s[i] < 'z'))
+		if (sep == 1 && (s[i] >= 'a' && s[i] <= 'z'))
 		{
 			s[i] -= 32;
 			sep = 0;
