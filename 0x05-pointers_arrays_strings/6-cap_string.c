@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
 * is_sep - check if a char is a seperator.
@@ -42,8 +41,6 @@ char *cap_string(char *s)
 			sep = 0;
 		}
 		sep = is_sep(s[i]);
-		if (s[i] == '\t')
-			s[i] = ' ';
 		i++;
 }
 	return (s);
