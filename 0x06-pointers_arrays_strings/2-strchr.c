@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * _strchr - returns a point to the first occurance of a character in a string.
@@ -10,6 +11,9 @@
 char *_strchr(char *s, char c)
 {
 	int i;
+
+	if (s == NULL)
+		return (NULL);
 
 	i = 0;
 	while (s[i] != '\0')
