@@ -58,3 +58,9 @@ char *leet(char *);
 char *rot13(char *);
 void print_number(int n);
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
+/**
+ * Prototypes for Moduke 0x06
+ */
+char *_memset(char *s, char b, unsigned int n);
+char *_memcpy(char *dest, char *src, unsigned int n);
+char *_strchr(char *s, char c);
