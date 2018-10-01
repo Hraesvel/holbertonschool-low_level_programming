@@ -1,0 +1,12 @@
+#include "holberton.h"
+
+/**
+ * fn - desciption
+ * @1: an arg
+ *
+ * Return:
+ */
+fn _()
+{
+        return (0);
+}

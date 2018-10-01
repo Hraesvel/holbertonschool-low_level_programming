@@ -13,3 +13,19 @@ This module we explore if , else and loops.
 
 Day three of C
 This module we explore nested loops.
+
+### [0x03-more_functions_nested_loops](/0x03-more_functions_nested_loops)
+
+<placeHolder>
+
+### [0x04-pointers_arrays_strings](/0x04-pointers_arrays_strings)
+
+<place Holder>
+
+### [0x05-pointers_arrays_strings](/0x05-pointers_arrays_strings)
+
+<place holder>
+
+### [0x06-pointers_arrays_strings](/0x06-pointers_arrays_strings)
+
+<place holder>
