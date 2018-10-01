@@ -5,20 +5,20 @@
  * @s: haystack.
  * @accept: needle.
  *
- * Return: pointer to to byte s that matches one of the byes in accept, or NULL.
+ * Return: pointer to to byte s that matches one of the byes in accept, or NUL
  */
 char *_strpbrk(char *s, char *accept)
 {
 	unsigned int i;
 
 	i = 0;
-	while (*s !='\0')
+	while (*s != '\0')
 	{
 		i = 0;
 		while (accept[i] != '\0')
 		{
-			if( *s == accept[i])
-				return(s);
+			if (*s == accept[i])
+				return (s);
 			i++;
 		}
 		s++;

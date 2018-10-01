@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _strspn - function  calculates  the  length (in bytes) of the initial 
+ * _strspn - function  calculates  the  length (in bytes) of the initial
  * segment of s which consists entirely of bytes in accept.
  * @s: string to search in.
  * @accept: bytes in which to search for.
@@ -20,7 +20,7 @@ unsigned int _strspn(char *s, char *accept)
 		z = 0;
 		while (accept[z] != '\0')
 		{
-			if(accept[z] == s[i])
+			if (accept[z] == s[i])
 			{
 				count++;
 			}

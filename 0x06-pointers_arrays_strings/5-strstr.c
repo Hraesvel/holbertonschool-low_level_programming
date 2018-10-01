@@ -5,7 +5,7 @@
  * @haystack: source string to search through.
  * @needle: string to search for.
  *
- * Return:
+ * Return: return beginning of located substring or NULL.
  */
 char *_strstr(char *haystack, char *needle)
 {
@@ -17,5 +17,5 @@ char *_strstr(char *haystack, char *needle)
 		}
 		haystack++;
 	}
-	return (0);
+	return (haystack);
 }
