@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * _strstr - function that locates a substring.
@@ -9,18 +10,30 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	unsigned int i,z;
+	unsigned int i,z, done;
 
 	i = 0;
 	z = 0;
+	done = 0;
 	while (haystack[i] != '\0')
 	{
-		while (haystack[i] == )
+		
+		if (needle[z] == haystack[i])
 		{
-			return (haystack);
+			done = 1;
+			z++;
+
+		}
+		else
+		{
+			done = 0;
+			z = 0;
 		}
 
+		if (needle[z] == '\0' && done == 1)
+			return ((haystack + i - z + 1));
 		i++;
 	}
-	return (haystack);
+
+	return (NULL);
 }
