@@ -38,3 +38,31 @@ code I've created for past modules.
 <li>_putchar.o</li>
   </ul>
 </details>
+
+### [create_static_lib.sh](./create_static_lib.sh)
+
+#### 1. Without libraries what have we? We have no past and no fuiture
+
+This Time rather then just write the command into the promt, I have to create a
+shell script that will create a Lib--`liball.a`-- from `*.c` file in the current
+directory.
+
+```
+#!/bin/bash                                                                                                          
+gcc -Wall -Werror -Wextra -pedantic -c *.c
+ar -rc liball.a *.c
+```
+
+### Write a Blog.
+
+#### 2. Either write something worth reading or do something worth writing
+
+This Task we have to write a blog about what we've learn about Static Libs and
+what happens in the background when creating them.
+
+* Why use libraries
+* How they work
+* How to create them
+* How to use them
+
+[Link Placeholder](http://www.google.com)
