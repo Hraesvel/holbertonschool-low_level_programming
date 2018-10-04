@@ -29,3 +29,12 @@ This module we explore nested loops.
 ### [0x06-pointers_arrays_strings](/0x06-pointers_arrays_strings)
 
 <place holder>
+  
+### [0x07-recursion](/0x07-recursion)
+
+This Module we learn about recursion and how they are differ from loops.
+
+### [0x08-static_libraries](/0x08-static_libraries)
+
+This Modlue we dive into creating static Lib and why we use them.
+
