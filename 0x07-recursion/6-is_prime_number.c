@@ -1,6 +1,7 @@
 #include "holberton.h"
 
 int prime_number(int n, int i);
+
 /**
  * is_prime_number - fuction the check if a number is a prime.
  * @n: number to be tested.
@@ -28,5 +29,6 @@ int prime_number(int n, int i)
 	else if (n % i == 0)
 		return (0);
 	else if (n % i != 0)
-		prime_number(n, i - 1);
+		return (prime_number(n, i - 1));
+	return (0);
 }
