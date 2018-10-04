@@ -12,7 +12,7 @@ int find_pal(char start, char *s);
 int is_palindrome(char *s)
 {
 	if (!(*s))
-		return (0);
+		return (1);
 	return (find_pal(*s, (s + 1)));
 }
 
