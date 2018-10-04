@@ -12,9 +12,9 @@ them.
 This task I learn to create my first static library--`libholberton.a`-- using some of the source
 code I've created for past modules.
 
-Src used below.
-Markup : <details>
-<summary>Src Used</summary>
+
+<details>
+<summary>Src Files Used</summary>
 <ul>
 <li>0-isupper.o</li>
 <li>0-memset.o</li>
