@@ -1,5 +1,3 @@
-#include "holberton.h"
-
 /**
  * _strspn - function  calculates  the  length (in bytes) of the initial
  * segment of s which consists entirely of bytes in accept.
@@ -26,6 +24,8 @@ unsigned int _strspn(char *s, char *accept)
 			{
 				count++;
 				checker = 1;
+			/* Break to early increase efficiency */
+				break;
 			}
 			z++;
 		}
