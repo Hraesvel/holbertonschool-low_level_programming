@@ -13,6 +13,9 @@ This task I learn to create my first static library--`libholberton.a`-- using so
 code I've created for past modules.
 
 Src used below.
+Markup : <details>
+<summary>Src Used</summary>
+<p>
 * 0-isupper.o
 * 0-memset.o
 * 0-strcat.o
@@ -33,5 +36,5 @@ Src used below.
 * 6-abs.o
 * 9-strcpy.o
 * _putchar.o
-
-
+</p>
+</details>
