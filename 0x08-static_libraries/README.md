@@ -15,26 +15,26 @@ code I've created for past modules.
 Src used below.
 Markup : <details>
 <summary>Src Used</summary>
-<p>
-* 0-isupper.o
-* 0-memset.o
-* 0-strcat.o
-* 1-isdigit.o
-* 1-memcpy.o
-* 1-strncat.o
-* 100-atoi.o
-* 2-strchr.o
-* 2-strlen.o
-* 2-strncpy.o
-* 3-islower.o
-* 3-puts.o
-* 3-strcmp.o
-* 3-strspn.o 
-* 4-isalpha.o
-* 4-strpbrk.o
-* 5-strstr.o
-* 6-abs.o
-* 9-strcpy.o
-* _putchar.o
-</p>
+<ul>
+<li>0-isupper.o</li>
+<li>0-memset.o</li>
+<li>0-strcat.o</li>
+<li>1-isdigit.o</li>
+<li>1-memcpy.o</li>
+<li>1-strncat.o</li>
+<li>100-atoi.o</li>
+<li>2-strchr.o</li>
+<li>2-strlen.o</li>
+<li>2-strncpy.o</li>
+<li>3-islower.o</li>
+<li>3-puts.o</li>
+<li>3-strcmp.o</li>
+<li>3-strspn.o</li>
+<li>4-isalpha.o</li>
+<li>4-strpbrk.o</li>
+<li>5-strstr.o</li>
+<li>6-abs.o</li>
+<li>9-strcpy.o</li>
+<li>_putchar.o</li>
+  </ul>
 </details>
