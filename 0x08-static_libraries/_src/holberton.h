@@ -1,6 +1,7 @@
-/**
- * print_alphabt - print the lower-case alphabet on one line.
- */
+#ifndef _HOLBERTON_H_
+#define _HOLBERTON_H_
+
+/* print_alphabt - print the lower-case alphabet on one line. */
 int _putchar(char c);
 void print_alphabet(void);
 void print_alphabet_x10(void);
@@ -15,9 +16,7 @@ int add(int a, int b);
 void print_to_98(int n);
 void print_times_table(int n);
 
-/**
- * prototypes for module 0x03
- */
+/* prototypes for module 0x03 */
 int _isupper(int c);
 int _isdigit(int c);
 int mul(int a, int b);
@@ -30,9 +29,7 @@ void print_square(int size);
 void print_triangle(int size);
 void print_number(int n);
 
-/**
- * Prototypes for module 0x04
- */
+/* Prototypes for module 0x04 */
 void reset_to_98(int *n);
 int _strlen(char *s);
 void swap_int(int *a, int *b);
@@ -45,9 +42,7 @@ void print_array(int *a, int n);
 char *_strcpy(char *dest, char *src);
 int _atoi(char *s);
 
-/**
- * Prototypes for Module 0x05
- */
+/* Prototypes for Module 0x05 */
 char *_strcat(char *dest, char *src);
 char *_strncat(char *dest, char *src, int n);
 char *_strncpy(char *dest, char *src, int n);
@@ -59,9 +54,7 @@ char *leet(char *);
 char *rot13(char *);
 void print_number(int n);
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
-/**
- * Prototypes for Moduke 0x06
- */
+/* Prototypes for Moduke 0x06 */
 char *_memset(char *s, char b, unsigned int n);
 char *_memcpy(char *dest, char *src, unsigned int n);
 char *_strchr(char *s, char c);
@@ -72,9 +65,7 @@ void print_chessboard(char (*a)[8]);
 void print_diagsums(int *a, int size);
 void set_string(char **s, char *to);
 
-/**
- * Prototypes for Module 0x07
- */
+/* Prototypes for Module 0x07 */
 void _puts_recursion(char *s);
 void _print_rev_recursion(char *s);
 int _strlen_recursion(char *s);
@@ -83,4 +74,4 @@ int _pow_recursion(int x, int y);
 int _sqrt_recursion(int n);
 int is_prime_number(int n);
 int is_palindrome(char *s);
-
+#endif /* _HOLBERTON_H_ */
