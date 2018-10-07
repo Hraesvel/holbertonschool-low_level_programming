@@ -2,14 +2,15 @@
 
 /**
  * main - multiplies two numbers
- * @1: an arg
+ * @argc: counts the arguments.
+ * @argv: string array for the arguments entered
  *
  * Return: 0 (Sucess) else 1 (Failure).
  */
 int main(int argc, char *argv[])
 {
 	int i, sum = 1;
-	
+
 	/*one for app name and two for the int values */
 	if (argc != 3)
 	{
