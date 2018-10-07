@@ -39,9 +39,9 @@ int main(int argc, char *argv[])
  */
 int give_change(int money)
 {
-	int one, five, ten, tf, sum;
+	int one, two, five, ten, tf, sum;
 
-	sum = one = five = ten = tf = 0;
+	sum = one = two = five = ten = tf = 0;
 
 	if (money <= 0)
 	{
@@ -65,10 +65,12 @@ int give_change(int money)
 		five = money / 5;
 		money -= five * 5;
 	}
-
-	if (money < 5)
+	if (money < 5 && money >= 2)
+		two = money / 2;
+		money -= two * 2;
+	if (money < 2)
 		one = money;
 
-	sum = tf + ten + five + one;
+	sum = tf + ten + five + two + one;
 	return (sum);
 }
