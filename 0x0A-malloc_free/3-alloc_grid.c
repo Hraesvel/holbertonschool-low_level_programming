@@ -5,14 +5,15 @@
  * alloc_grid - function returns a pointer to a 2 dimensional array of
  * integers.
  * @width: colums.
- * @hight: rows.
+ * @height: rows.
  *
  * Return: Pointer to 2d array.
  */
 int **alloc_grid(int width, int height)
 {
-        int **arr;
+	int **arr;
 	int r, c, i;
+
 	arr = (int **)malloc(sizeof(int) * height);
 	if (arr == NULL)
 		return (NULL);
