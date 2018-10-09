@@ -10,26 +10,28 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int a,b,c;
+	int a, b, c;
 	char *str;
 
 	a = b = 0;
 	if (!(*s1) && !(*s2))
 		return (0);
 	if (*s1)
-		for (a = 0; s1[a]; a++);
-	if(*s2)
-		for (b = 0; s2[b]; b++);
-	
+		for (a = 0; s1[a]; a++)
+			;
+	if (*s2)
+		for (b = 0; s2[b]; b++)
+			;
+
 	str = malloc(sizeof(char) * (a + b));
 	c = 0;
 	while (c < (a + b))
 	{
-		if(c < a)
+		if (c < a)
 			str[c] = s1[c];
 		else
 			str[c] = s2[c - a];
-		
+
 		c++;
 	}
 	str[c] = 0;
