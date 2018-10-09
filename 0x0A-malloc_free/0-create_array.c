@@ -3,7 +3,7 @@
 /**
  * create_array - creates an array of a spacific size and fill with a char.
  * @size : the Size of the array to make.
- * @char: characture to fill the array with.
+ * @c: characture to fill the array with.
  *
  * Return: An array of charactures.
  */
