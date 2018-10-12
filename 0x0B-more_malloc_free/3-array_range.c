@@ -20,10 +20,12 @@ int *array_range(int min, int max)
 	arr = malloc(sizeof(int) * (b + 1));
 	if (!arr)
 		return (NULL);
-	do {
+	while (max > min)
+	{
 		arr[b] = max;
+		b--;
 		max--;
-	} while (--b > 0);
+	}
 	arr[b] = min;
 	return (arr);
 }
