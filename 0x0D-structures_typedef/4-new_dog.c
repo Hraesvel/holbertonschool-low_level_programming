@@ -16,14 +16,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	d = malloc(sizeof(dog_t));
 	if (!d)
 		return (NULL);
-	if(name)
+	if (name)
 		d->name = name;
 	else
 		d->name = NULL;
 
-	d-> age = age;
+	d->age = age;
 
-	if(owner)
+	if (owner)
 		d->owner = owner;
 	else
 		d->owner = NULL;
