@@ -1,5 +1,6 @@
 #include "dog.h"
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * new_dog - create new dog from the dna of the first dog.
@@ -13,8 +14,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *d;
 
-	if (!(name && owner))
-		return (NULL);
 
 	d = malloc(sizeof(dog_t));
 	if (!d)
@@ -26,7 +25,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(d);
 		return (NULL);
 	}
-	d->name = name;
+	strcpy(d->name , name);
 
 	d->owner = malloc(sizeof(owner));
 	if (!(d->owner))
@@ -35,7 +34,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(d);
 		return (NULL);
 	}
-	d->owner = owner;
+	strcpy(d->owner, owner);
 	d->age = age;
 
 	return (d);
