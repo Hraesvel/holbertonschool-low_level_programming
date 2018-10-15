@@ -26,7 +26,6 @@ void _strcopy(char *dst, char *src)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *d;
-	char *n, *o;
 	int a, b;
 
 	for (a = 0; name[a]; a++)
@@ -38,25 +37,23 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (!d)
 		return (NULL);
 
-	n = malloc(a + 1);
-	if (!n)
+	d->name = malloc(a + 1);
+	if (!d->name)
 	{
 		free(d);
 		return (NULL);
 	}
 
-	o = malloc(b + 1);
-	if (!o)
+	d->owner = malloc(b + 1);
+	if (!d->owner)
 	{
-		free(n);
+		free(d->name);
 		free(d);
 		return (NULL);
 	}
 
-	_strcopy(n, name);
-	_strcopy(o, owner);
-	d->name = n;
+	_strcopy(d->name, name);
+	_strcopy(d->owner, owner);
 	d->age = age;
-	d->owner = o;
 	return (d);
 }
