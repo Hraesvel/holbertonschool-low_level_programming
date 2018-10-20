@@ -1,11 +1,18 @@
 #ifndef _STDARG_H
+#define _STDARG_H
 #include <stdarg.h>
 #endif
 
 #ifndef _VARIADIC_FUNCTIONS_H
 #define _VARIADIC_FUNCTIONS_H
-
-typedef struct print_ops {
+/**
+ * struct print_ops - struct use to match the operator
+ * with correlating function
+ * @op: string represention of the operator.
+ * @f: function pointer for the operation to be used.
+ */
+typedef struct print_ops
+{
 	char *op;
 	void (*f)(va_list);
 } p_op;
