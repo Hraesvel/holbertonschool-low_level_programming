@@ -17,13 +17,11 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *r;
 
 	va_start(vls, n);
-	if (n == 0)
-		return;
 	i = 0;
 	while (i < n)
 	{
 		r = va_arg(vls, char*);
-		if (!r || !r[0])
+		if (!r)
 			printf("(nil)");
 		else
 			printf("%s", r);
