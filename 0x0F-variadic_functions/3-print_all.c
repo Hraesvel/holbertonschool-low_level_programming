@@ -26,7 +26,7 @@ void pr_char(va_list val)
  */
 void pr_float(va_list val)
 {
-	printf("%f", va_arg(val, float));
+	printf("%f", va_arg(val, double));
 }
 
 /**
