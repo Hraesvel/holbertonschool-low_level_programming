@@ -69,6 +69,11 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 
+	if (!format || !format[0])
+	{
+		putchar(10);
+		return;
+	}
 	va_start(vls, format);
 	i = j = 0;
 	while (format[j])
