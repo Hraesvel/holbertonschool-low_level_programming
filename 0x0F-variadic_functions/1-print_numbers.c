@@ -12,20 +12,21 @@
  */
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	va_list vlist;
+	va_list vls;
 	unsigned int i = 0;
 
-	va_start(vlist, n);
+	va_start(vls, n);
 
 	if (n == 0)
 		return;
 	while (i < n)
 	{
 
-		printf("%d", va_arg(vlist, int));
+		printf("%d", va_arg(vls, int));
 		i++;
 		if (i < n && separator)
 			printf("%s", separator);
 	}
 	putchar(10);
+	va_end(vls);
 }
