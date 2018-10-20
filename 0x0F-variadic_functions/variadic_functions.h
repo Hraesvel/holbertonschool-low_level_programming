@@ -1,5 +1,5 @@
-#ifndef _STDARG_H
-#define _STDARG_H
+#ifndef STDARG_H
+#define STDARG_H
 #include <stdarg.h>
 #endif
 
