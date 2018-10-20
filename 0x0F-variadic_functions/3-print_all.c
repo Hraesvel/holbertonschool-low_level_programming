@@ -38,7 +38,7 @@ void pr_str(va_list val)
 	char *r;
 
 	r = va_arg(val, char *);
-	switch ((!r || !r[0]))
+	switch (!r)
 	{
 	case 0:
 		printf("%s", r);
