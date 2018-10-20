@@ -1,32 +1,37 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdarg.h>
 #include "variadic_functions.h"
 
-void pr_int(va_list *val)
+void pr_int(va_list val)
 {
 	printf("%d",va_arg(val, int));
 }
 
-void pr_char(va_list *val)
+void pr_char(va_list val)
 {
 	printf("%c", va_arg(val, int));
 }
 
-void pr_float(va_list *val)
+void pr_float(va_list val)
 {
 	printf("%f", va_arg(val, double));
 }
 
-void pr_str(va_list *val)
+void pr_str(va_list val)
 {
-	printf("%s" , va_arg(val, char *));
+	char *r;
+	r = va_arg(val , char *);
+	switch ((!r || !r[0])) {
+		case 0 :
+			printf("%s", r);
+			break;
+		case 1 :
+			printf("(nil)");
+			break;
+	}
+
 }
 
-typedef struct print_ops {
-	char *op;
-	void (*f)(va_list*);
-} p_op;
 /**
  * print_all - print all argument that match with format.
  * @format: type to print out.
@@ -37,7 +42,7 @@ void print_all(const char * const format, ...)
 {
         
 	int i, j;
-	va_list vl, *ptr;
+	va_list vls;
 	p_op ops[] = {
 		{"c", pr_char},
 		{"i", pr_int},
@@ -46,28 +51,24 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 
-	va_start(vl, format);
-	ptr = &vl;
+	va_start(vls, format);
 	i = j = 0;
 	while (format[j])
-	{
-		if(ops[i].op[0] == format[j])
+	{ 
+		i = 0;
+		while (ops[i].op)
 		{
-			(ops[i].f)(ptr);
-			printf(", ");
-			i = 0;
-			j++;
-			continue;
-
+			if(ops[i].op[0] == format[j])
+			{
+				(ops[i].f)(vls);
+				if (format[j + 1])
+					printf(", ");
+			}
+			i++;
 		}
-		i++;
-		if (!format[i])
-		{
-			j++;
-			i = 0;
-		}
+		j++;
 
 	}
-	printf("%lu\n", sizeof(vl));
-	va_end(vl);	
+	putchar(10);
+	va_end(vls);	
 }
