@@ -17,7 +17,7 @@ size_t print_list(const list_t *h)
 		return (0);
 	n_nodes = 0;
 	do {
-		if (!h->str)
+		if (!h->str || !h->str[0])
 			printf("[0] (nil)\n");
 		else
 			printf("[%d] %s\n", h->len, h->str);
@@ -28,7 +28,7 @@ size_t print_list(const list_t *h)
 
 	if (h)
 	{
-		if (!h->str)
+		if (!h->str || !h->str[0])
 			printf("[0] (nil)\n");
 		else
 			printf("[%d] %s\n", h->len, h->str);
