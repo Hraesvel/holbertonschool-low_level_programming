@@ -17,23 +17,19 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (!(*head))
 	{
 		*head = new_node(str);
-		if (!(*head))
-			return (NULL);
 		return (*head);
 	}
 
 	if (!(*head)->next)
 	{
 		new = new_node(str);
-		if (!new)
-			return (NULL);
 		new->next = (*head)->next;
 		(*head)->next = new;
 	}
 	else
 		add_node_end(&(*head)->next, str);
 	
-	return (NULL);
+	return (*head);
 }
 
 /**
