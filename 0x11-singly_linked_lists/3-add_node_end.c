@@ -16,7 +16,6 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	if (!(*head))
 	{
-		printf("Start New");
 		*head = new_node(str);
 		return (*head);
 	}
