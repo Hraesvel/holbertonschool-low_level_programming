@@ -1,6 +1,5 @@
 #include "lists.h"
 #include <string.h>
-char *_strdup(const char *);
 
 /**
  * add_node - appends a node to the head
@@ -11,9 +10,9 @@ char *_strdup(const char *);
  */
 list_t *add_node(list_t **head, const char *str)
 {
-        list_t *new;
+	list_t *new;
 	size_t len = 0;
-	
+
 	new = malloc(sizeof(list_t));
 	if (!new)
 		return (NULL);
