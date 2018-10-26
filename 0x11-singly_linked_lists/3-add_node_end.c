@@ -16,13 +16,14 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	if (!(*head))
 	{
+		printf("Start New");
 		*head = new_node(str);
 		return (*head);
 	}
 
-	new = new_node(str);
 	if (!(*head)->next)
 	{
+		new = new_node(str);
 		new->next = (*head)->next;
 		(*head)->next = new;
 	}
