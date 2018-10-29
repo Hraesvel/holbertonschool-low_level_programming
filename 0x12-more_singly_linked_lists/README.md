@@ -114,3 +114,115 @@ $ gcc -Wall -pedantic -Werror -Wextra 1-main.c 1-listint_len.c -o b
 $ ./b
 -> 2 elements
 ```
+
+### [2-add_nodeint.c](./2-add_nodeint.c)
+
+This task have to create a function that add a new node to the `head` of a list.
+
+* Prototype: `listint_t *add_nodeint(listint_t **head, const int n);`
+* Return: the address of the new element, or `NULL` if it failed
+
+<details>
+<summary>Test 2-main.c</summary>
+
+```C
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "lists.h"
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+
+    head = NULL;
+    add_nodeint(&head, 0);
+    add_nodeint(&head, 1);
+    add_nodeint(&head, 2);
+    add_nodeint(&head, 3);
+    add_nodeint(&head, 4);
+    add_nodeint(&head, 98);
+    add_nodeint(&head, 402);
+    add_nodeint(&head, 1024);
+    print_listint(head);
+    return (0);
+}
+```
+
+</details>
+
+#### Output
+```
+$ gcc -Wall -pedantic -Werror -Wextra 2-main.c 2-add_nodeint.c 0-print_listint.c -o c
+$ ./c 
+1024
+402
+98
+4
+3
+2
+1
+0
+$ 
+```
+
+### [3-add_nodeint_end.c](./3-add_nodeint_end.c)
+
+This task have to create a function that add a new node to the `end` of a list.
+
+* Prototype: `listint_t *add_nodeint_end(listint_t **head, const int n);`
+* Return: the address of the new element, or `NULL` if it failed
+
+<details>
+<summary>Test 3-main.c</summary>
+
+```C
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "lists.h"
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+
+    head = NULL;
+    add_nodeint_end(&head, 0);
+    add_nodeint_end(&head, 1);
+    add_nodeint_end(&head, 2);
+    add_nodeint_end(&head, 3);
+    add_nodeint_end(&head, 4);
+    add_nodeint_end(&head, 98);
+    add_nodeint_end(&head, 402);
+    add_nodeint_end(&head, 1024);
+    print_listint(head);
+    return (0);
+}
+```
+
+</details>
+
+#### Output
+```
+$ gcc -Wall -pedantic -Werror -Wextra 3-main.c 3-add_nodeint_end.c 0-print_listint.c -o d
+$ ./d
+0
+1
+2
+3
+4
+98
+402
+1024
+$ 
+```
