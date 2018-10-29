@@ -1,7 +1,6 @@
 #include "lists.h"
 
-
-listint_t *new_node(const int n);
+static listint_t *new_node(const int n);
 
 /**
  * add_nodeint - add a node at the head of a list.
@@ -32,7 +31,7 @@ listint_t *add_nodeint(listint_t **head, const int n)
  *
  * Return: pointer to the new node. 
  */
-listint_t *new_node(const int n)
+static listint_t *new_node(const int n)
 {
 	listint_t *new;
 
