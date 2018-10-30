@@ -36,9 +36,9 @@ listint_t *reverse_listint(listint_t **head)
 			pre = temp;
 			temp = temp->next;
 			pre->next = *head;
-			if (!temp->next)
+			if (!temp)
 			{
-				temp->next = pre;
+				temp = pre;
 				break;
 			}
 			*head = pre;
