@@ -3,15 +3,12 @@
 #include <stdio.h>
 #include "lists.h"
 
-/**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
- */
-int main(void)
+void test_01()
 {
+	
     listint_t *head;
 
+    printf("test_01\n");
     head = NULL;
     add_nodeint_end(&head, 0);
     add_nodeint_end(&head, 1);
@@ -25,5 +22,62 @@ int main(void)
     reverse_listint(&head);
     print_listint(head);    
     free_listint2(&head);
+    printf("--------------------");
+}
+
+void test_02()
+{
+	
+    listint_t *head;
+
+    printf("test_02\n");
+    head = NULL;
+    add_nodeint_end(&head, 0);
+    print_listint(head);
+    reverse_listint(&head);
+    print_listint(head);    
+    free_listint2(&head);
+    printf("--------------------");
+}
+
+void test_03()
+{
+	
+    listint_t *head;
+
+    printf("test_03\n");
+    head = NULL;
+    add_nodeint_end(&head, 0);
+    add_nodeint_end(&head, 1);
+    print_listint(head);
+    reverse_listint(&head);
+    print_listint(head);    
+    free_listint2(&head);
+    printf("--------------------");
+}
+void test_04()
+{
+	
+    listint_t *head;
+
+    printf("test_04\n");
+    head = NULL;
+    print_listint(head);
+    reverse_listint(&head);
+    print_listint(head);    
+    free_listint2(&head);
+    printf("--------------------");
+}
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	test_01();
+	test_02();
+	test_03();
+	test_04();
     return (0);
 }
