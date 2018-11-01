@@ -68,7 +68,7 @@ This task have to create a function that prints the binary representation of a n
 * You are not allowed to use the `%` or `/` operators
 
 <details>
-<summary>Test 0-main.c</summary>
+<summary>Test 1-main.c</summary>
 
 ```C
 #include <stdio.h>
@@ -120,7 +120,7 @@ This task have to create a function that returns the value of a bit at a given i
 * Returns: the value of the bit at index `index` or `-1` if an error occured
 
 <details>
-<summary>Test 0-main.c</summary>
+<summary>Test 2-main.c</summary>
 
 ```C
 #include <stdio.h>
@@ -168,7 +168,7 @@ This task have to create a function that sets the value of a bit to 1 at a given
 * Returns: `1` if it worked, or `-1` if an error occurred
 
 <details>
-<summary>Test 0-main.c</summary>
+<summary>Test 3-main.c</summary>
 
 ```C
 #include <stdio.h>
@@ -219,7 +219,7 @@ This task have to create a function that sets the value of a bit to 0 at a given
 * Returns: `1` if it worked, or `-1` if an error occurred
 
 <details>
-<summary>Test 0-main.c</summary>
+<summary>Test 4-main.c</summary>
 
 ```C
 #include <stdio.h>
@@ -269,7 +269,7 @@ This task have to create a function that returns the number of bits you would ne
 * You are not allowed to use the `%` or `/` operators
 
 <details>
-<summary>Test 0-main.c</summary>
+<summary>Test 5-main.c</summary>
 
 ```C
 #include <stdio.h>
