@@ -38,3 +38,42 @@ This Module we learn about recursion and how they are differ from loops.
 
 This Modlue we dive into creating static Lib and why we use them.
 
+### [0x09-argc_argv](./0x09-argc_argv)
+
+<place holder>
+  
+### [0x0A-malloc_free](.0x0A-malloc_free)
+
+<place holder>
+
+### [0x0B-more_malloc_free](./0x0B-more_malloc_free)
+
+<placeholder>
+  
+### [0x0C-preprocessor](./0x0C-preprocessor)
+
+<place holder>
+  
+### [0x0D-structures_typedef](./0x0D-structures_typedef)
+
+<placeholder>
+
+### [0x0E-function_pointers](./0x0E-function_pointers)
+
+<place holder>
+  
+### [0x0F-variadic_functions](./0x0F-variadic_functions)
+
+<placeholder>
+  
+### [0x11-singly_linked_lists](./0x11-singly_linked_lists)
+
+<placeholder>
+  
+### [0x12-more_singly_linked_lists](./0x12-more_singly_linked_lists)
+
+<placeolder>
+  
+### [0x13-bit_manipulation](./0x13-bit_manipulation)
+
+This module we'll learn how to do bit manipulation and use bitwise operators.
