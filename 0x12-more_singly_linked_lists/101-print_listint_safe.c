@@ -9,39 +9,47 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t len;
-	const listint_t *h1, *h2;
-	int tog = 0;
+	const listint_t *slow_p = head ,*fast_p = head;
+	size_t ele = 0;
+	int is_loop = 0;
 
-	if (!head)
-		return (0);
-
-	h1 = head;
-	len = 0;
-	while (h1)
-	{ 
-		if (len > 20)
+	while (slow_p && fast_p && fast_p->next)
+	{
+		if (!(fast_p->next->next))
 			break;
-		h2 = head;
-		tog = 0;
-		while (h2)
+		slow_p = slow_p->next;
+		fast_p = fast_p->next->next;
+		if (slow_p == fast_p)
 		{
-			printf("-%p %d: %p %d\n",(void*)h1,h1->n, (void*)h2, h2->n);
-			tog++;
-			if (tog > 0)
-				break;
-			else if ((h1 == h2) && (tog > 1))
-			{
-				printf("-> [%p] %d\n",(void*)h1, h1->n);
-				exit(98);
-			}
-			else if (tog > 2)
-				break;
-			h2 = h2->next;
+			slow_p = slow_p->next;
+			is_loop = 1;
+			break;
 		}
-	/*	printf("[%p] %d\n", (void*)h1, h1->n); */
-		len++;
-		h1 = h1->next;
 	}
-	return (len);
+
+	if (!is_loop)
+	{
+		while (head)
+		{
+			ele++;
+			printf("[%p] %d\n", (void *)head, head->n);
+			head = head->next;
+		}
+		return (ele);
+	}
+
+	while (head)
+	{
+		ele++;
+		if (head == slow_p)
+		{
+			printf("[%p] %d\n", (void *)head, head->n);
+			printf("-> [%p] %d\n", (void *)head, head->next->n);
+			exit(98);
+		}
+
+		printf("[%p] %d\n", (void *)head, head->n);
+		head = head->next;
+	}
+	return (0);
 }
