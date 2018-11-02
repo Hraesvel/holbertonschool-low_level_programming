@@ -7,7 +7,7 @@
 unsigned int bin_len(unsigned long int n)
 {
 	unsigned int i;
-	
+
 	for (i = 0; n != 0; ++i)
 		n >>= 1;
 	return (i);
@@ -16,12 +16,12 @@ unsigned int bin_len(unsigned long int n)
 /**
  * set_bit - function that sets the value of a bit to 1 at a given index.
  * @n: pointer to a number
- * @index: 
+ * @index:
  *
  * Return: 1 (Sucess) else -1
  */
 int set_bit(unsigned long int *n, unsigned int index)
-{	
+{
 	if (bin_len(*n) - 1 < index)
 		return (-1);
 
