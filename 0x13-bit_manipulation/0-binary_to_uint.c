@@ -11,7 +11,7 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned int num, i, expo = 1;
 
-	if (!b)
+	if (!b || !*b)
 		return (0);
 
 	i = 0;
@@ -23,8 +23,7 @@ unsigned int binary_to_uint(const char *b)
 	}
 	i--;
 	num = 0;
-	do
-	{
+	do {
 		num += (b[i] - '0') * expo;
 		expo *= 2;
 	} while (i--);
