@@ -100,3 +100,55 @@ by Oscar Wilde
 $
 ```
 ---
+
+### [1-create_file.c](./1-create_file.c)
+
+* Prototype: `int create_file(const char *filename, char *text_content);`
+* where `filename` is the name of the file to create and `text_content` is a `NULL` terminated string to write to the file
+* Returns: `1` on success, `-1` on failure (file can not be created, file can not be written, `write` “fails”, etc…)
+* The created file must have those permissions: `rw-------`. If the file already exists, do not change the permissions.
+* if the file already exists, truncate it
+* if `filename` is `NULL` return `-1`
+* if `text_content` is `NULL` create an empty file
+
+<details>
+<summary>Test 1-main.c</summary>
+
+```C
+nclude <stdio.h>
+#include <stdlib.h>
+#include "holberton.h"
+
+/**
+ * main - check the code for Holberton School students.
+ *
+ * Return: Always 0.
+ */
+int main(int ac, char **av)
+{
+    int res;
+
+    if (ac != 3)
+    {
+        dprintf(2, "Usage: %s filename text\n", av[0]);
+        exit(1);
+    }
+    res = create_file(av[1], av[2]);
+    printf("-> %i)\n", res);
+    return (0);
+}
+```
+
+</details>
+
+#### OUTPUT
+
+```
+$ alias gccw="gcc -Wall -pedantic -Werror -Wextra" 
+$ gccw 1-main.c 1-create_file.c -o b
+$ ./b hello world
+-> 1)
+$ cat -e hello
+world
+```
+
