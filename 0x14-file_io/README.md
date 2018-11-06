@@ -21,8 +21,10 @@ At the end of this project you are expected to be able to explain to anyone, wit
 - if the file can not be opened or read, return `0`
 - if `filename` is `NULL` return `0`
 - if `write` fails or does not write the expected amount of bytes, return `0`
+
 <details>
 <summary>Test File</summary>
+    
 ```
 Requiescat
 by Oscar Wilde
@@ -52,10 +54,12 @@ Lyre or sonnet,
 All my life's buried here,
 Heap earth upon it.
 ```
+
 </details>
 
 <details>
 <summary>Test 0-main.c</summary>
+    
 ```C
 #include <stdio.h>
 #include <stdlib.h>
@@ -84,6 +88,7 @@ int main(int ac, char **av)
 ```
 </details>
 
+##### OUTPUT
 ```
 $ ./a Requiescat
 Requiescat
@@ -94,3 +99,4 @@ by Oscar Wilde
 (printed chars: 468)
 $
 ```
+---
