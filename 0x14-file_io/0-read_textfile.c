@@ -34,7 +34,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 	buf[letters] = '\0';
-	err = write(1, buf, rd);
+	err = write(STDOUT_FILENO, buf, rd);
 	if (err <= 0)
 	{
 		free(buf);
