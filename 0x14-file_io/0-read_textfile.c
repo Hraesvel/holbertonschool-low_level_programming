@@ -24,25 +24,17 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
-	{
-		close(fd);
 		return (0);
-	}
 
 	buf = malloc(sizeof(char) * letters + 1);
 	if (!buf)
-	{
-		close(fd);
 		return (0);
-	}
 	err = read(fd, buf, letters);
 	if (err < 0)
 	{
 		free(buf);
-		close(fd);
 		return (0);
 	}
-
 	buf[letters + 1] = '\0';
 
 	while (buf[len])
@@ -51,7 +43,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (err <= 0)
 	{
 		free(buf);
-		close(fd);
 		return (0);
 	}
 
