@@ -15,18 +15,18 @@ static void write_copy(char *file, int fd, char *buf, int len);
  * @ac: argument count.
  * @av: argoument values.
  *
- * Return: 0 (SUCESS)
+ * Return: 0 (SUCCESS)
  */
 int main(int ac, char *av[])
 {
-	int fd_0, fd_1, rd_len;
+	int fd_0, fd_1, rd_len, err;
 	char *buf, *file_from, *file_to;
 
 	buf = NULL;
 	rd_len = 1;
 	if (ac != 3)
 	{
-		dprintf(2, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	file_from = av[1];
@@ -42,16 +42,16 @@ int main(int ac, char *av[])
 	}
 
 	free(buf);
-	close(fd_0);
-	if (fd_0 < 0)
+	err = close(fd_0);
+	if (err < 0)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", fd_0);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_0);
 		exit(100);
 	}
-	close(fd_1);
-	if (fd_1 < 0)
+	err = close(fd_1);
+	if (err < 0)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", fd_1);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_1);
 		exit(100);
 	}
 	return (0);
@@ -70,21 +70,21 @@ static ssize_t read_file(char *file, char **buf, int fd)
 
 	if (fd < 0)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", file);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file);
 		exit(98);
 	}
 	if (!(*buf))
 		*buf = malloc(sizeof(char) * BUFSIZE);
 	if (!(*buf))
 	{
-		dprintf(2, "Error: Can't read from file %s\n", file);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file);
 		exit(98);
 	}
 	rd_len = read(fd, *buf, BUFSIZE);
 	if (rd_len < 0)
 	{
 		free(*buf);
-		dprintf(2, "Error: Can't read from file %s\n", file);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file);
 		exit(98);
 	}
 	return (rd_len);
@@ -102,13 +102,13 @@ static void write_copy(char *file, int fd, char *buf, int len)
 	if (fd < 0 || !buf)
 	{
 		free(buf);
-		dprintf(2, "Error: Can't write to %s\n", file);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
 		exit(99);
 	}
 	if (write(fd, buf, len) < 0)
 	{
 		free(buf);
-		dprintf(2, "Error: Can't write to %s\n", file);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
 		exit(99);
 	}
 }
