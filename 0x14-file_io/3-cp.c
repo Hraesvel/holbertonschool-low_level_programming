@@ -32,7 +32,7 @@ int main(int ac, char *av[])
 	file_from = av[1];
 	file_to = av[2];
 	fd_0 = open(file_from, O_RDONLY);
-	fd_1 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 664);
+	fd_1 = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	while (rd_len > 0)
 	{
 	/* Read the content from origin file */
@@ -68,9 +68,14 @@ static ssize_t read_file(char *file, char **buf, int fd)
 {
 	int rd_len;
 
-	if (!*buf)
+	if (fd < 0)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", file);
+		exit(98);
+	}
+	if (!(*buf))
 		*buf = malloc(sizeof(char) * BUFSIZE);
-	if (fd < 0 || !buf || !(*buf) || !file[0])
+	if (!(*buf))
 	{
 		dprintf(2, "Error: Can't read from file %s\n", file);
 		exit(98);
@@ -94,7 +99,7 @@ static ssize_t read_file(char *file, char **buf, int fd)
  */
 static void write_copy(char *file, int fd, char *buf, int len)
 {
-	if (fd < 0 || !buf || !file[0])
+	if (fd < 0 || !buf)
 	{
 		free(buf);
 		dprintf(2, "Error: Can't write to %s\n", file);
@@ -107,11 +112,4 @@ static void write_copy(char *file, int fd, char *buf, int len)
 		exit(99);
 	}
 }
-
-
-
-
-
-
-
 
