@@ -77,3 +77,5 @@ This Modlue we dive into creating static Lib and why we use them.
 ### [0x13-bit_manipulation](./0x13-bit_manipulation)
 
 This module we'll learn how to do bit manipulation and use bitwise operators.
+
+### [0x14-file_io](./0x14-file_io)
