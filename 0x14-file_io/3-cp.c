@@ -37,6 +37,8 @@ int main(int ac, char *av[])
 	{
 	/* Read the content from origin file */
 	rd_len = read_file(file_from, &buf, fd_0);
+	if (!rd_len)
+		break;
 	/* Write out the buffer to destination */
 	write_copy(file_to, fd_1, buf, rd_len);
 	}
@@ -46,11 +48,6 @@ int main(int ac, char *av[])
 	if (err < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_0);
-		err = close(fd_1);
-		if (err < 0)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_1);
-		}
 		exit(100);
 	}
 	err = close(fd_1);
