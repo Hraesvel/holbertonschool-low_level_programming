@@ -45,13 +45,12 @@ int main(int ac, char *av[])
 	err = close(fd_0);
 	if (err < 0)
 	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_0);
 		err = close(fd_1);
 		if (err < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_1);
-			exit(100);
 		}
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_0);
 		exit(100);
 	}
 	err = close(fd_1);
