@@ -3,10 +3,17 @@
 
 static dlistint_t *new_node(const int n);
 
+/**
+ * add_dnodeint_end - add a new node to the end of a linked list
+ * @head: pointer to a pointer of a linked list
+ * @n: value to set the new node to.
+ *
+ * Return: a pointer to the new node added.
+ */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
 	dlistint_t *node;
-	
+
 	if (*head)
 	{
 		node = *head;
@@ -24,13 +31,19 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 }
 
 
+/**
+ * new_node - creates a new node and set it to a value given.
+ * @n: value to set the new node to
+ *
+ * Return: a pointer to a new node.
+ */
 static dlistint_t *new_node(const int n)
 {
 	dlistint_t *node;
 
 	node = malloc(sizeof(dlistint_t));
 	if (!node)
-		return NULL;
+		return (NULL);
 	node->n = n;
 	node->prev = NULL;
 	node->next = NULL;
