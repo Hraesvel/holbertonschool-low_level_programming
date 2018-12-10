@@ -6,7 +6,7 @@
 void test_0(void)
 {
     dlistint_t *head;
-	printf("test 0 \n");
+	printf("test 0: add anywhere valid\n");
     head = NULL;
     add_dnodeint_end(&head, 0);
     add_dnodeint_end(&head, 1);
@@ -27,7 +27,7 @@ void test_0(void)
 void test_1(void)
 {
     dlistint_t *head;
-	printf("test 1 \n");
+	printf("test 1: add to start\n");
     head = NULL;
     add_dnodeint_end(&head, 0);
     add_dnodeint_end(&head, 1);
@@ -48,7 +48,7 @@ void test_1(void)
 void test_2(void)
 {
     dlistint_t *head;
-	printf("test 2 \n");
+	printf("test 2: add to end\n");
     head = NULL;
     add_dnodeint_end(&head, 0);
     add_dnodeint_end(&head, 1);
@@ -68,7 +68,7 @@ void test_2(void)
 void test_3(void)
 {
     dlistint_t *head;
-	printf("test 3 \n");
+	printf("test 3: head null\n");
     head = NULL;
     printf("-----------------\n");
     insert_dnodeint_at_index(&head, 0, 4096);
@@ -79,11 +79,11 @@ void test_3(void)
 void test_4(void)
 {
     dlistint_t *head;
-	printf("test 4 \n");
+	printf("test 4: index out of range \n");
     head = NULL;
     add_dnodeint_end(&head, 0);
     printf("-----------------\n");
-    insert_dnodeint_at_index(&head, 2, 4096);
+    insert_dnodeint_at_index(&head, 10, 4096);
     print_dlistint(head);
     free_dlistint(head);
     head = NULL;
