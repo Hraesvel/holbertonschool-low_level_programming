@@ -12,9 +12,9 @@ size_t print_dlistint(const dlistint_t *h)
 
 	if (!h)
 		return (0);
-	if (h->prev)
-		while (h->prev)
-			h->prev;
+	
+	while (h->prev)
+		h = h->prev;
 
 	while (h)
 	{
