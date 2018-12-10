@@ -169,7 +169,7 @@ return (EXIT_SUCCESS);
 
 ```
 
-</detail>
+</details>
 
 **Demo**
 
@@ -389,7 +389,7 @@ Write a function that returns the sum of all the data (n) of a `dlistint_t` link
 * if the list is empty, return `0`
 
 <details>
-<summary>Test Main</sumarry>
+<summary>Test Main</summary>
 
 ```C
 
