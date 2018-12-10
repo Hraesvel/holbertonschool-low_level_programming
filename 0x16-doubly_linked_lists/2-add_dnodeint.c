@@ -36,16 +36,13 @@ static dlistint_t *new_node(dlistint_t **head, const int n)
 	if (!node)
 		return (NULL);
 	node->n = n;
+	node->prev = NULL;
+	node->next = NULL;
 
 	if (*head)
 	{
 		node->next = *head;
 		(*head)->prev = node;
-	}
-	else
-	{
-		node->prev = NULL;
-		node->next = NULL;
 	}
 
 	return (node);
