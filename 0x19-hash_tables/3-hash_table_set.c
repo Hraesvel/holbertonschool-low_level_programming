@@ -1,5 +1,6 @@
 #include "hash_tables.h"
 
+hash_node_t *update_node(hash_node_t *node, const char *key, char *value);
 hash_node_t *new_node(hash_node_t *);
 
 /**
@@ -14,7 +15,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int idx;
 	char *str;
-	hash_node_t *node, *t_node;
+	hash_node_t *node;
 
 	if (!ht || !key)
 		return (0);
@@ -30,28 +31,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (!node)
 		node = new_node(NULL);
 
-	t_node = node;
 	if (node->key)
 	{
-		if (strcmp(key, node->key))
-		{
-			node = new_node(node);
-			if (!node)
-			{
-				node = t_node;
-				return (0);
-			}
-			node->key = strdup(key);
-			node->value = str;
-			ht->array[idx] = node;
-			return (1);
-		}
-		else if (node->key)
-		{
-			free(node->value);
-			node->value = str;
-			return (1);
-		}
+		ht->array[idx] = update_node(node, key, str);
+		return (1);
 	}
 	node->key = strdup(key);
 	node->value = str;
@@ -59,6 +42,35 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	ht->array[idx] = node;
 	return (1);
+}
+
+hash_node_t *update_node(hash_node_t *node, const char *key, char *value)
+{
+	hash_node_t *tmp = node;
+
+	while (tmp)
+	{
+
+		if (!strcmp(key, tmp->key))
+		{
+			free(tmp->value);
+			tmp->value = value;
+			return (node);
+		}
+		tmp = tmp->next;
+	}
+
+	tmp = node;
+	node = new_node(node);
+	if (!node)
+	{
+		node = tmp;
+		return node;
+	}
+	node->key = strdup(key);
+	node->value = value;
+	return node;
+	
 }
 
 /**
