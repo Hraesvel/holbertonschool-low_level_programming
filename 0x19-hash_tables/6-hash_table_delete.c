@@ -24,11 +24,14 @@ void hash_table_delete(hash_table_t *ht)
 	free(ht);
 }
 
-
+/**
+ * delete_node - deletes a bucket
+ * @node: nodes to delete
+ */
 void delete_node(hash_node_t *node)
 {
 	hash_node_t *tmp;
-	
+
 	while (node)
 	{
 		tmp = node;
