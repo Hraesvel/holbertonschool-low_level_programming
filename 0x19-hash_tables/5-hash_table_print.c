@@ -10,30 +10,32 @@ void hash_table_print(const hash_table_t *ht)
 	hash_node_t *node;
 
 	idx = i = 0;
-
 	printf("{");
-	while (idx < ht->size)
+	if (ht)
 	{
-		node = ht->array[idx];
-		while (node)
+		while (idx < ht->size)
 		{
-			printf("\'%s\': \'%s\'", node->key, node->value);
+			node = ht->array[idx];
+			while (node)
+			{
+				printf("\'%s\': \'%s\'", node->key, node->value);
 
-			if (node->next)
+				if (node->next)
+					printf(", ");
+				else
+					idx++;
+				node = node->next;
+			}
+
+			while (!(ht->array[idx + 1]))
+				idx++;
+
+			if (i && idx < ht->size)
 				printf(", ");
 			else
-				idx++;
-			node = node->next;
-		}
-
-		while (!(ht->array[idx + 1]))
+				i = 1;
 			idx++;
-
-		if (i && idx < ht->size)
-			printf(", ");
-		else
-			i = 1;
-		idx++;
+		}
 	}
 	printf("}\n");
 }
