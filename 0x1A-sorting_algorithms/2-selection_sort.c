@@ -14,7 +14,7 @@ void selection_sort(int *array, size_t size)
 
 	idx = tmp = lo = 0;
 
-	if (!array)
+	if (!array || size == 0)
 		return;
 
 	while (idx < (int) size - 1)
