@@ -10,7 +10,8 @@ void hash_table_print(const hash_table_t *ht)
 	hash_node_t *node;
 
 	idx = i = 0;
-
+	if (!ht)
+		return;
 	printf("{");
 	while (idx < ht->size)
 	{
@@ -21,8 +22,6 @@ void hash_table_print(const hash_table_t *ht)
 
 			if (node->next)
 				printf(", ");
-			else
-				idx++;
 			node = node->next;
 		}
 
