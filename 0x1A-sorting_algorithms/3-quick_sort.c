@@ -23,6 +23,7 @@ void quick_sort(int *array, size_t size)
  * swap - swaps 2 elements of a given array.
  *
  * @array: point to an array
+ * @size: size of the array.
  * @idx: index of postion withing the array
  * @wall: index of postion withing the array
  */
@@ -30,10 +31,12 @@ void swap(int *array, size_t size, int idx, int wall)
 {
 	int tmp = array[wall];
 
-	array[wall] = array[idx];
-	array[idx] = tmp;
 	if (idx != wall)
+	{
+		array[wall] = array[idx];
+		array[idx] = tmp;
 		print_array(array, size);
+	}
 }
 
 /**
@@ -60,8 +63,7 @@ void partition(int *array, size_t size, int lo, int hi)
 	{
 		if (array[i] < array[pivot])
 		{
-			if (i != wall)
-				swap(array, size, i, wall);
+			swap(array, size, i, wall);
 			wall++;
 		}
 		i++;
