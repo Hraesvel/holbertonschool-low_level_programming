@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 
-void swap(int *array, int idx, int wall);
+void swap(int *array, size_t size, int idx, int wall);
 void partition(int *array, size_t size, int lo, int hi);
 
 /**
@@ -26,12 +26,14 @@ void quick_sort(int *array, size_t size)
  * @idx: index of postion withing the array
  * @wall: index of postion withing the array
  */
-void swap(int *array, int idx, int wall)
+void swap(int *array, size_t size, int idx, int wall)
 {
 	int tmp = array[wall];
 
 	array[wall] = array[idx];
 	array[idx] = tmp;
+	if (idx != wall)
+		print_array(array, size);
 }
 
 /**
@@ -49,7 +51,7 @@ void partition(int *array, size_t size, int lo, int hi)
 
 	if ((hi) - lo <= 0)
 		return;
-	else if (hi == 1 && array[0] < array[hi])
+	if (hi == 1 && array[0] < array[hi])
 		return;
 
 	i = wall = lo;
@@ -58,15 +60,16 @@ void partition(int *array, size_t size, int lo, int hi)
 	{
 		if (array[i] < array[pivot])
 		{
-			swap(array, i, wall);
+			if (i != wall)
+				swap(array, size, i, wall);
 			wall++;
 		}
 		i++;
 	}
+	swap(array, size, pivot, wall);
 
-	swap(array, pivot, wall);
-	print_array(array, size);
-
-	partition(array, size, wall + 1, pivot);
-	partition(array, size, lo, wall - 1);
+	if (hi - lo > 0)
+		partition(array, size, wall + 1, pivot);
+	if (hi - lo > 0)
+		partition(array, size, lo, wall - 1);
 }
