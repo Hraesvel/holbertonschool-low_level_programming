@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 
-int swap(int *array, size_t size, int idx, int wall);
+void swap(int *array, size_t size, int idx, int wall);
 void partition(int *array, size_t size, int lo, int hi);
 
 /**
@@ -27,7 +27,7 @@ void quick_sort(int *array, size_t size)
  * @idx: index of postion withing the array
  * @wall: index of postion withing the array
  */
-int swap(int *array, size_t size, int idx, int wall)
+void swap(int *array, size_t size, int idx, int wall)
 {
 	int tmp = array[wall];
 
@@ -37,7 +37,6 @@ int swap(int *array, size_t size, int idx, int wall)
 		array[idx] = tmp;
 		print_array(array, size);
 	}
-	return wall;
 }
 
 /**
@@ -69,10 +68,10 @@ void partition(int *array, size_t size, int lo, int hi)
 		}
 		i++;
 	}
-	pivot = swap(array, size, pivot, wall);
+	swap(array, size, pivot, wall);
 
-	if (hi - lo > 0 && pivot != hi)
+	if (hi - lo > 0)
 		partition(array, size, wall + 1, hi);
-	if (hi - lo > 0 && pivot)
+	if (hi - lo > 0)
 		partition(array, size, lo, wall - 1);
 }
