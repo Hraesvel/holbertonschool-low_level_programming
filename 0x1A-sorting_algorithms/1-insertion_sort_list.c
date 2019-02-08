@@ -13,7 +13,6 @@ void insertion_sort_list(listint_t **list)
 	if (!list || !(*list))
 		return;
 	head = node = *list;
-
 	while (1)
 	{
 		if (!node->prev)
