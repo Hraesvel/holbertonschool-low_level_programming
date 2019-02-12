@@ -3,8 +3,12 @@
 
 def island_perimeter(grid):
     """ Function that returns detail of a grid"""
+
+    if not isinstance(grid, list) or not len(grid):
+        return 0
     y = len(grid) - 1
     x = len(grid[0]) - 1
+
     prim = 0
 
     for h in range(y):
