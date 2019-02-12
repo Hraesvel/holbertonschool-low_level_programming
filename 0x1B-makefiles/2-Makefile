@@ -1,15 +1,15 @@
 CC = gcc
 SRC = $(shell ls *c)
 NAME = holberton
-OBJ = main.o holberton.o
+OBJ = $(subst .c,.o,$(SRC))
 
-all: task
+all: $(NAME)
 
-task: $(OBJ)
+$(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 %.o: %.c m.h
 	$(CC) -c -o $@ $<
 
 clean:
-	rm *.o holberton
+	rm *.o $(NAME)
