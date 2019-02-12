@@ -1,7 +1,7 @@
 CC = gcc
-SRC := $(shell ls *c)
+SRC = $(shell ls *c)
 NAME = holberton
-OBJ := $(subst .c,.o,$(SRC))
+OBJ = $(subst .c,.o,$(SRC))
 
 all: task
 
