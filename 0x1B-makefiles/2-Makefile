@@ -3,9 +3,7 @@ SRC = $(shell ls *c)
 NAME = holberton
 OBJ = $(subst .c,.o,$(SRC))
 
-all: $(NAME)
-
-$(NAME): $(OBJ)
+all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 %.o: %.c m.h
