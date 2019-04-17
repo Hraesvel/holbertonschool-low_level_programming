@@ -35,7 +35,19 @@ int binary_search(int *array, size_t size, int value)
 int bin_search(int *array, size_t min, size_t max, int value)
 {
 
-	size_t mid;
+	size_t mid, i;
+
+	i = min;
+	printf("Searching in array: ");
+	while (i <= max)
+	{
+		printf("%d", array[i]);
+		if (i < max)
+			printf(", ");
+		else
+			printf("\n");
+		i++;
+	}
 
 	if (max <= 0 || min >= max)
 		return (-1);
@@ -48,7 +60,7 @@ int bin_search(int *array, size_t min, size_t max, int value)
 		return ((int) mid);
 
 	if (value < array[mid])
-		return (bin_search(array, min, mid, value));
+		return (bin_search(array, min, mid - 1, value));
 
 	if (value > array[mid])
 		return (bin_search(array, mid + 1, max, value));
