@@ -38,14 +38,14 @@ int bin_search(int *array, size_t min, size_t max, int value)
 
 	size_t mid;
 
-	print_array(array, min, max);
-	if (max <= 0 || min >= max)
+	if (min > max)
 		return (-1);
 	if (min == 0)
 		mid = max / 2;
 	else
 		mid =  min + ((max - min) / 2);
 
+	print_array(array, min, max);
 	if (value == array[mid])
 		return ((int) mid);
 
