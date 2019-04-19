@@ -67,7 +67,7 @@ int bin_search(int *array, size_t min, size_t max, int value)
  * @end: index of right
  *
  */
-void print_array(int *array, size_t start, size_t end) 
+void print_array(int *array, size_t start, size_t end)
 {
 	printf("Searching in array: ");
 	while (start <= end)
