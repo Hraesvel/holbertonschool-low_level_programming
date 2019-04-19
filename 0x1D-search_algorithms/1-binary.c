@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 int bin_search(int *array, size_t min, size_t max, int value);
+void print_array(int *array, size_t start, size_t end);
 
 /**
  * binary_search - search for an element using the binary search algorithm
@@ -35,20 +36,9 @@ int binary_search(int *array, size_t size, int value)
 int bin_search(int *array, size_t min, size_t max, int value)
 {
 
-	size_t mid, i;
+	size_t mid;
 
-	i = min;
-	printf("Searching in array: ");
-	while (i <= max)
-	{
-		printf("%d", array[i]);
-		if (i < max)
-			printf(", ");
-		else
-			printf("\n");
-		i++;
-	}
-
+	print_array(array, min, max);
 	if (max <= 0 || min >= max)
 		return (-1);
 	if (min == 0)
@@ -67,4 +57,26 @@ int bin_search(int *array, size_t min, size_t max, int value)
 
 	return (-1);
 
+}
+
+/**
+ * print_array - prints array
+ *
+ * @array: haystack (int* array)
+ * @start: of left side
+ * @end: index of right
+ *
+ */
+void print_array(int *array, size_t start, size_t end) 
+{
+	printf("Searching in array: ");
+	while (start <= end)
+	{
+		printf("%d", array[start]);
+		if (start < end)
+			printf(", ");
+		else
+			printf("\n");
+		start++;
+	}
 }
